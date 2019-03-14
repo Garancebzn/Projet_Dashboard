@@ -31,64 +31,51 @@ class Template extends Component {
 			  <BrowserRouter>		  
                     <div className="row">
                         <div className="col-xs-12 col-md-4">
-						<Col xl={{ span: 7, offset: 3 }} lg={{ span: 8, offset: 3 }} xs={{ span: 8, offset: 2 }}>
 							<Container id="chart">
 								<div className="content">
-									<Route path="/chart-zoom-pan" component={ChartWithZoom}/>
-									
+									<ChartWithZoom/>
 								</div>
 							</Container>
-						</Col>
                         </div>
 
                         <div className="col-xs-12 col-md-4">
-                        <Col xl={{ span: 7, offset: 3 }} lg={{ span: 8, offset: 3 }} xs={{ span: 8, offset: 2 }}>
 							<Container id="piechart">
 								<div className="content">
 									<PieChart/>
 								</div>
 							</Container>
-						</Col>
                         </div>
 
                         <div className="col-xs-12 col-md-4">
-                        <Col xl={{ span: 7, offset: 3 }} lg={{ span: 8, offset: 3 }} xs={{ span: 8, offset: 2 }}>
 							<Container id="baton">
 								<div className="content">
 									<Baton/>
 								</div>
 							</Container>
-						</Col>	
                         </div>	
 
                         <div className="col-xs-12 col-md-4">
-                        <Col xl={{ span: 7, offset: 3 }} lg={{ span: 8, offset: 3 }} xs={{ span: 8, offset: 2 }}>
 							<Container id="card">
 								<div className="content">
 									<Card/>
 								</div>
 							</Container>
-						</Col>	
                         </div>
 
                         <div className="col-xs-12 col-md-4">
-                        <Col xl={{ span: 7, offset: 3 }} lg={{ span: 8, offset: 3 }} xs={{ span: 8, offset: 2 }}>
 							<Container id="top5">
 								<div className="content">
 									<Top5/>
 								</div>
 							</Container>
-						</Col>	
                         </div>
 
                         <div className="col-xs-12 col-md-4">
-                        <Col xl={{ span: 7, offset: 3 }} lg={{ span: 8, offset: 3 }} xs={{ span: 8, offset: 2 }}>
-							<Container id="top5">
+							<Container id="pendule">
 								<div className="content">
 									<Pendule/>
 								</div>
 							</Container>
-						</Col>	
                         </div>				
 
 					</div>			

@@ -23,6 +23,23 @@
     background-color: bisque;
 }
 
+#card{
+    margin: 10px;
+    height: 250px;
+    width: 350px;
+    background-color: bisque;
+}
+
 #top5{
+    margin: 10px;
+    height: 250px;
+    width: 350px;
+    background-color: bisque;
+}
+
+#pendule{
+    margin: 10px;
+    height: 250px;
+    width: 350px;
     background-color: bisque;
 }

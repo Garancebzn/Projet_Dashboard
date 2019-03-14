@@ -5,8 +5,9 @@ export default class Example extends React.Component {
   render() {
     return (
       <ListGroup>
-        <ListGroupItem>Cras justo odio</ListGroupItem>
-        <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
+          <h1>TOP 5</h1>
+        <ListGroupItem>1. Djadja</ListGroupItem>
+        <ListGroupItem>2. </ListGroupItem>
         <ListGroupItem>Morbi leo risus</ListGroupItem>
         <ListGroupItem>Porta ac consectetur ac</ListGroupItem>
         <ListGroupItem>Vestibulum at eros</ListGroupItem>
