@@ -1,0 +1,28 @@
+.row{
+    background-color: aquamarine;
+}
+
+#chart{
+    margin: 10px;
+    height: 250px;
+    width: 370px;
+    background-color: bisque;
+}
+
+#piechart{
+    margin: 10px;
+    height: 250px;
+    width: 350px;
+    background-color: bisque;
+}
+
+#baton{
+    margin: 10px;
+    height: 250px;
+    width: 350px;
+    background-color: bisque;
+}
+
+#top5{
+    background-color: bisque;
+}
