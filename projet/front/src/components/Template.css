@@ -1,0 +1,51 @@
+.row{
+    background-color: white;
+}
+
+#chart{
+    margin: 10px;
+    height: 250px;
+    width: 370px;
+    border-radius: 2%;
+    box-shadow: 1px 1px 10px #555;
+}
+
+#piechart{
+    margin: 10px;
+    height: 250px;
+    width: 350px;
+    border-radius: 2%;
+    box-shadow: 1px 1px 10px #555;
+}
+
+#baton{
+    margin: 10px;
+    height: 250px;
+    width: 350px;
+    border-radius: 2%;
+    box-shadow: 1px 1px 10px #555;
+}
+
+#card{
+    margin: 10px;
+    height: 300px;
+    width: 370px;
+    border-radius: 2%;
+    box-shadow: 1px 1px 10px #555;
+}
+
+#top5{
+    margin: 10px;
+    height: 310px;
+    width: 350px;
+    border-radius: 2%;
+    box-shadow: 1px 1px 10px #555;
+}
+
+#pendule{
+    margin: 10px;
+    height: 250px;
+    width: 350px;
+    border-radius: 2%;
+    box-shadow: 1px 1px 10px #555;
+}
