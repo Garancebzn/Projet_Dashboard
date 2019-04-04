@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import {Container, Row, Col} from 'reactstrap';
+
 
 
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
@@ -68,7 +70,9 @@ export default class Example extends React.Component {
 
   render() {
     return (
-      <div>
+      <Form>
+        <Row form>
+      <Col md="4">
      
       <Form className = "NewArtist" onSubmit={this.handleSubmit}>
 
@@ -104,7 +108,95 @@ export default class Example extends React.Component {
         </FormGroup>
         <Button className="Submit">Submit</Button>
       </Form>
-      </div>
+
+      </Col>
+
+<Col md="4">
+      <Form className = "NewAlbum" onSubmit={this.handleSubmit}>
+      <h1>Ajouter un Album</h1>
+      
+        <FormGroup>
+          <Label for="titre">Titre de l'album</Label>
+          <Input type="text" name="Titre" id="TitreAlbum"  />
+        </FormGroup>
+        <FormGroup>
+          <Label for="Date">Date de sortie</Label>
+          <Input
+            type="date"
+            name="Sortie"
+            id="DatedeSortie"
+
+          />
+        </FormGroup>
+
+        <FormGroup>
+          <Label for="genre">Genre</Label>
+          <Input type="text" name="Genre" id="GenreAlbum"  />
+        </FormGroup>
+        <FormGroup>
+          <Label for="urlcover">URL Cover</Label>
+          <Input type="text" name="UrlCover" id="UrlCoverAlbum"  />
+        </FormGroup>
+        <FormGroup>
+          <Label for="reftitres">Ref Titres</Label>
+          <Input type="text" name="RefTitres" id="RefTitresAlbum"  />
+        </FormGroup>
+
+        <Button className="Submit">Submit</Button>
+      </Form>
+      </Col>
+
+
+      <Col md="4">
+      <Form className = "NewTitre" onSubmit={this.handleSubmit}>
+
+      <h1>Ajouter un Titre</h1>
+
+
+        <FormGroup>
+          <Label for="titrechanson">Titre</Label>
+          <Input type="text" name="Titrechanson" id="TitreChanson"  />
+        </FormGroup>
+
+        <FormGroup>
+          <Label for="duree">Durée</Label>
+          <Input
+            type="number"
+            name="dureechanson"
+            id="DureeChanson"
+
+          />
+        </FormGroup>
+        <FormGroup>
+          <Label for="Ecoutes">Ecoutes</Label>
+          <Input
+            type="number"
+            name="ecouteschanson"
+            id="EcoutesChanson"
+
+          />
+        </FormGroup>
+        <FormGroup>
+          <Label for="Followers">Mention "j'aime"</Label>
+          <Input
+            type="number"
+            name="nbrjaime"
+            id="NbrJaime"
+
+          />
+        </FormGroup>
+        <FormGroup>
+          <Label for="refartistefeat">Featuring</Label>
+          <Input type="text" name="Refartistefeat" id="RefArtisteFeat"  />
+        </FormGroup>
+
+        <Button className="Submit">Submit</Button>
+      </Form>
+      </Col>
+
+      </Row>
+      </Form>
+
     );
   }
 }
