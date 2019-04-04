@@ -5,17 +5,57 @@ import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 import './Contact.css';
+import Axios from 'axios';
 
 export default class Example extends React.Component {
 
-  constructor(props) {
-    super(props);
+  state = {
+    Artisteliste:[],
+    inputNomArtiste :'',
+    inputDatedeNaissance:'',
+    inputFollowers:'',
+    inputAlbums:'',
+  }
 
+  onNomArtisteChange = event => {
+    this.setState({ inputNomArtiste : event.target.value });
+  }
+
+  onNomArtisteSubmit = event => {
+    event.preventDefault();
+
+    var requestBody = {
+      nom : this.state.inputNomArtiste,
+    }
+
+    Axios.post('http://localhost:3001/api/dashboard', requestBody)
+    .then(res => {
+      console.log(res);
+      console.log(res.data);
+    })
+  }
+
+  constructor(props) {
+
+    var self=this;
+
+    Axios.get('http://localhost:3001/api/dashboard')
+    .then(function (response){
+      self.setState({Artisteliste: response.data})
+    })
+  
+    .catch(function(error){
+      console.log(error);
+    });
+
+    super(props);
+  
   this.state = {value: ''};
   this.handleChange = this.handleChange.bind(this);
   this.handleSubmit = this.handleSubmit.bind(this);
 
   }
+
 
   handleChange(event) {
     this.setState({value: event.target.value});
