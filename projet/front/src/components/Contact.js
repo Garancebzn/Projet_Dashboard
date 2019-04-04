@@ -28,7 +28,7 @@ export default class Example extends React.Component {
       nom : this.state.inputNomArtiste,
     }
 
-    Axios.post('http://localhost:3001/api/dashboard', requestBody)
+    Axios.post('http://localhost:3000/api/dashboard', requestBody)
     .then(res => {
       console.log(res);
       console.log(res.data);
@@ -39,7 +39,7 @@ export default class Example extends React.Component {
 
     var self=this;
 
-    Axios.get('http://localhost:3001/api/dashboard')
+    Axios.get('http://localhost:3000/api/dashboard')
     .then(function (response){
       self.setState({Artisteliste: response.data})
     })
