@@ -70,9 +70,11 @@ export default class Example extends React.Component {
 
   render() {
     return (
-      <Form>
-        <Row form>
-      <Col md="4">
+
+      <div className="App-header" >
+      <div className="row">
+      <div className="col-4">
+    
      
       <Form className = "NewArtist" onSubmit={this.handleSubmit}>
 
@@ -109,9 +111,9 @@ export default class Example extends React.Component {
         <Button className="Submit">Submit</Button>
       </Form>
 
-      </Col>
+      </div>
 
-<Col md="4">
+      <div className="col-4">
       <Form className = "NewAlbum" onSubmit={this.handleSubmit}>
       <h1>Ajouter un Album</h1>
       
@@ -144,10 +146,10 @@ export default class Example extends React.Component {
 
         <Button className="Submit">Submit</Button>
       </Form>
-      </Col>
+      </div>
 
 
-      <Col md="4">
+      <div className="col-4">
       <Form className = "NewTitre" onSubmit={this.handleSubmit}>
 
       <h1>Ajouter un Titre</h1>
@@ -192,10 +194,10 @@ export default class Example extends React.Component {
 
         <Button className="Submit">Submit</Button>
       </Form>
-      </Col>
+      </div>
 
-      </Row>
-      </Form>
+      </div>
+      </div>
 
     );
   }
