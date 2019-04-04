@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import axios from 'axios';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min';
 //import Row from 'react-bootstrap/Row';
@@ -23,6 +25,16 @@ import './Template.css';
 
 
 class Template extends Component {
+
+	componentDidMount(){
+    axios.get('http://localhost:3100/dashboard')
+    .then(response => {
+      this.setState({ serverports: response.data });
+    })
+    .catch(function (error) {
+      console.log(error);
+    })
+  }
   
   render() {    
     return (
