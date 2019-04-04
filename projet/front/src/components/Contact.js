@@ -10,54 +10,61 @@ import './Contact.css';
 import Axios from 'axios';
 
 export default class Example extends React.Component {
+  
+  constructor(props) {
+  super(props);
+        this.onnameChange = this.onnameChange.bind(this);
+        this.onbirthChange = this.onbirthChange.bind(this);
+        this.onfollowersChange = this.onfollowersChange.bind(this);
+        this.onAlbumChange = this.onAlbumChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
 
   state = {
-    Artisteliste:[],
-    inputNomArtiste :'',
-    inputDatedeNaissance:'',
-    inputFollowers:'',
-    inputAlbums:'',
+    name :'',
+    birth:'',
+    followers:'',
+    Album:'',
   }
+}
 
-  onNomArtisteChange = event => {
-    this.setState({ inputNomArtiste : event.target.value });
+onnameChange(e) {
+  this.setState({
+      name: e.target.value
+  });
+}
+onbirthChange(e) {
+  this.setState({
+      birth: e.target.value
+  });
+}
+onfollowersChange(e) {
+  this.setState({
+      followers: e.target.value
+  });
+}
+onAlbumChange(e) {
+  this.setState({
+      Album: e.target.value
+  });
+}
+onSubmit(e) {
+  e.preventDefault();
+  const serverport = {
+      name: this.state.name,
+      birth: this.state.birth,
+      followers: this.state.followers,
+      Album: this.state.Album,
   }
-
-  onNomArtisteSubmit = event => {
-    event.preventDefault();
-
-    var requestBody = {
-      nom : this.state.inputNomArtiste,
-    }
-
-    Axios.post('http://localhost:3000/api/dashboard', requestBody)
-    .then(res => {
-      console.log(res);
-      console.log(res.data);
-    })
-  }
-
-  constructor(props) {
-
-    var self=this;
-
-    Axios.get('http://localhost:3000/api/dashboard')
-    .then(function (response){
-      self.setState({Artisteliste: response.data})
-    })
+  axios.post('http://localhost:3001/serverport/dashboard', serverport)
+  .then(res => console.log(res.data));
   
-    .catch(function(error){
-      console.log(error);
-    });
-
-    super(props);
-  
-  this.state = {value: ''};
-  this.handleChange = this.handleChange.bind(this);
-  this.handleSubmit = this.handleSubmit.bind(this);
-
-  }
-
+  this.setState({
+      name: '',
+      birth: '',
+      followers: '',
+      Album: ''
+  });
+}
 
   handleChange(event) {
     this.setState({value: event.target.value});
