@@ -3,7 +3,7 @@ const Artist = require('../models/artist.model.js');
 // Create and Save a new Artist
 exports.create = (req, res) => {
   // Validate request
-  if (!req.body.name) {
+  if (!req.body.name_artist) {
     // If firstName is not present in body reject the request by
     // sending the appropriate http code
     return res.status(400).send({
@@ -13,7 +13,7 @@ exports.create = (req, res) => {
 
   // Create a new Artist
   const artist = new Artist({
-    name: req.body.name,
+    name_artist: req.body.name_artist,
     birth: req.body.birth,
     followers: req.body.followers,
     Album: req.body.Album,
