@@ -1,18 +1,10 @@
-.NewArtist {
+.App-header{
 
-    margin-left: 20%;
-    margin-right: 20%;
-
+    background-color: #ffffff;
+    text-decoration-color: black;
+   
 }
 
-.h1{
-text-align: center;
-}
 
-.Submit{
 
-    display: inline-block;
-    text-align: center;
 
-    
-}
