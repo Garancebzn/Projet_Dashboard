@@ -19,20 +19,22 @@ export default class Example extends React.Component {
         this.onSubmit = this.onSubmit.bind(this);*/
 
   state = {
-    name :'',
+    name_artist :'',
     birth:'',
-    followers:0,
+    followers:'',
     Album:'',
+    name_album:'',
     date_sortie: '',
     genre: '',
     cover_picture_url:'',
-    durée: 0,
-    nb_ecoute: 0,
-    like: 0
+    name_titre:'',
+    durée: '',
+    nb_ecoute: '',
+    like: ''
   }
 
   handleChange = event => {
-    this.setState({ name: event.target.value });
+    this.setState({ name_artist: event.target.value });
   }
   handleChange1 = event => {
     this.setState({ birth: event.target.value });
@@ -47,15 +49,20 @@ export default class Example extends React.Component {
   handleSubmit = event => {
     event.preventDefault();
 
+    /*
     var artists = {
-      name: this.state.name,
+      name_artist: this.state.name_artist,
       birth: this.state.birth,
       followers: this.state.followers,
       Album: this.state.Album
-    };
+    };*/
 
-    axios.put('http://localhost:3001/artist', artists )
+    axios.put('http://localhost:3001/artist',{ name_artist: this.state.name_artist,
+    birth: this.state.birth,
+    followers: this.state.followers,
+    Album: this.state.Album })
       .then(res => {
+        console.log(this.state.name_artist);
         console.log(res);
         console.log(res.data);
       })
@@ -66,7 +73,7 @@ export default class Example extends React.Component {
 
   
   handleChange4 = event => {
-    this.setState({ name: event.target.value });
+    this.setState({ name_album: event.target.value });
   }
   handleChange5 = event => {
     this.setState({ date_sortie: event.target.value });
@@ -83,7 +90,7 @@ export default class Example extends React.Component {
     event.preventDefault();
     
     var albums = {
-      name: this.state.name,
+      name_album: this.state.name_album,
       date_sortie: this.state.date,
       genre: this.state.genre,
       cover_picture_url: this.state.cover_picture_url,
@@ -101,7 +108,7 @@ export default class Example extends React.Component {
 
 
   handleChange8 = event => {
-    this.setState({ name: event.target.value });
+    this.setState({ name_titre: event.target.value });
   }
   handleChange9 = event => {
     this.setState({ nbr_ecoute: event.target.value });
@@ -117,7 +124,7 @@ export default class Example extends React.Component {
     event.preventDefault();
     
     var titres = {
-      name: this.state.nom,
+      name_titre: this.state.name_titre,
       nb_ecoute: this.state.nb_ecoutes,
       like: this.state.likes,
   
@@ -202,7 +209,7 @@ onSubmit(e) {
       
         <FormGroup>
           <Label for="nom">Nom</Label>
-          <Input id="NomArtiste" onChange={this.handleChange}  />
+          <Input id="name_artist" onChange={this.handleChange}  />
         </FormGroup>
         <FormGroup>
           <Label for="Date">Birth</Label>

@@ -27,7 +27,7 @@ import './Template.css';
 class Template extends Component {
 
 	componentDidMount(){
-    axios.get('http://localhost:3100/dashboard')
+    axios.get('http://localhost:3001/dashboard')
     .then(response => {
       this.setState({ serverports: response.data });
     })
